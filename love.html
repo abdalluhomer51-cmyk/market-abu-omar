@@ -3,120 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>محمد & نسيم ❤️</title>
+<title>محمد & تسنيم</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Amiri:wght@700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif}
-body{background:#fffaf8;color:#5a3a3a;text-align:center}
-section{padding:35px 18px;max-width:560px;margin:auto}
-.small{font-size:13px;color:#a08a8a}
-h1{font-size:56px;color:#c86b7a;line-height:1.1;margin:12px 0;font-weight:900}
-h1 b{color:#d4a017;font-size:46px}
-.sub{font-size:14px;color:#888}
-.timer{display:flex;gap:10px;justify-content:center;margin:22px 0}
-.timer div{background:#fff;border:1px solid #f3d9d9;border-radius:12px;padding:12px;width:72px}
-.timer b{font-size:26px;display:block;color:#c86b7a}
-.timer span{font-size:12px;color:#999}
-h2{font-size:30px;color:#c86b7a;margin-bottom:6px}
-p{font-size:15px;line-height:1.9;color:#777}
-.stars{background:#fdf0f0;border-radius:15px;height:190px;position:relative;margin:18px 0;overflow:hidden}
-.star{position:absolute;font-size:22px;color:#c9a86a}
-.card{background:#fff;border:1px solid #f5d6d6;border-radius:14px;padding:16px;margin:10px 0;text-align:right}
-.card b{color:#c86b7a;font-size:16px}
-.card p{color:#666}
-.letter{background:#fff;border-radius:16px;padding:22px;text-align:right;line-height:2.1;font-size:15px;box-shadow:0 5px 20px rgba(0,0,0,.05);color:#555}
-.reasons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0;text-align:right}
-.reason{background:#fff;border:1px solid #f0d9d9;border-radius:12px;padding:16px;min-height:90px}
-.reason b{color:#999;font-size:13px}
-.reason p{font-weight:700;color:#333;margin-top:6px;font-size:16px;line-height:1.5}
-.btn{background:#d67a8a;color:#fff;border:none;padding:15px 35px;border-radius:30px;font-size:19px;font-weight:700;cursor:pointer}
-.footer{font-size:12px;color:#aaa;padding-bottom:30px}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Cairo',sans-serif}
+body{background:#fdf6f0;color:#5a3a3a;overflow-x:hidden}
+section{padding:60px 20px;max-width:900px;margin:auto;text-align:center}
+h1{font-family:'Amiri',serif;font-size:64px;color:#d77a8a;line-height:1.2}
+h1 span{color:#c9a86a}
+.sub{color:#8a7a7a;margin:15px 0;font-size:18px}
+.count{display:flex;gap:12px;justify-content:center;margin:25px 0}
+.count div{background:#fff;border-radius:16px;padding:18px 10px;width:90px;box-shadow:0 5px 20px rgba(0,0,0,.05)}
+.count b{font-size:28px;display:block;color:#b98a5a}
+.count span{font-size:14px;color:#9a8a8a}
+.btn{background:#d77a8a;color:#fff;border:none;padding:14px 28px;border-radius:30px;font-size:17px;font-weight:700;cursor:pointer}
+.card{background:#fff;border-radius:24px;padding:30px;box-shadow:0 10px 30px rgba(0,0,0,.06);margin:20px 0;text-align:right}
+.card h3{color:#b98a5a;margin-bottom:10px}
+.card p{line-height:1.9;font-size:17px}
+/* Timeline */
+.timeline{position:relative;padding-right:20px}
+.timeline::before{content:'';position:absolute;right:28px;top:0;bottom:0;width:3px;background:#f2d6d6}
+.t-item{position:relative;margin:25px 50px 25px 0;text-align:right;background:#fff;padding:18px;border-radius:18px;box-shadow:0 5px 15px rgba(0,0,0,.04)}
+.t-item::before{content:'♥';position:absolute;right:-38px;top:18px;background:#fbe9e9;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#d77a8a}
+.t-item small{color:#c9a86a;font-weight:700}
+.t-item b{display:block;font-size:18px;margin:4px 0}
+/* Stars */
+.stars-box{background:#f9ecec;border-radius:24px;padding:30px;position:relative;height:320px;overflow:hidden}
+.star{position:absolute;font-size:32px;cursor:pointer;transition:.2s}
+.star:hover{transform:scale(1.3)}
+.star.active{color:#d77a8a}
+#starText{background:#fff;border-radius:20px;padding:25px;margin-top:20px;min-height:130px;text-align:right;line-height:1.9}
+#starText h3{color:#d77a8a;margin-bottom:8px}
+/* Reasons */
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:20px}
+.reason{background:#fff;border-radius:20px;padding:22px;text-align:right;box-shadow:0 5px 15px rgba(0,0,0,.04);border-right:4px solid #e8b4b8}
+.reason b{color:#d77a8a;display:block;margin-bottom:6px}
+.reason p{line-height:1.7;font-size:15px;color:#7a6a6a}
+.final{font-family:'Amiri',serif;font-size:52px;color:#d77a8a;margin:20px 0}
+@media(max-width:600px){h1{font-size:44px}.reasons{grid-template-columns:1fr}.count div{width:70px}}
 </style>
 </head>
 <body>
 
+<!-- الغلاف -->
 <section>
-<div class="small">حكاية من عمرنا هنحطها هنا</div>
-<h1>محمد <b>&</b> نسيم</h1>
-<p class="sub">كل يوم معاكي بيتحول لذكري، والمكان ده هنحطها فيه</p>
-<div class="timer">
+<p>حكاية بدأت من غير ما نخطط لها</p>
+<h1>محمد <span>&</span> تسنيم</h1>
+<p class="sub">كل يوم معاكي بيتحول لذكرى، والمكان ده بنجمعها فيه.</p>
+<div class="count">
 <div><b id="d">0</b><span>يوم</span></div>
 <div><b id="h">0</b><span>ساعة</span></div>
 <div><b id="m">0</b><span>دقيقة</span></div>
 <div><b id="s">0</b><span>ثانية</span></div>
 </div>
-<div class="small">واحنا سوا من أول يوم</div>
+<p>وإحنا سوا من أول يوم.</p><br>
+<a href="#letter"><button class="btn">ابدأي الحكاية ♥</button></a>
 </section>
 
-<section>
-<h2>ساع مواقفنا</h2>
-<p>كل نجمة موقف عدينا عليه واتفقنا عليه</p>
-<div class="stars">
-<span class="star" style="top:20px;left:20px">★</span>
-<span class="star" style="top:85px;left:95px">★</span>
-<span class="star" style="top:30px;left:190px">★</span>
-<span class="star" style="top:115px;left:260px">★</span>
-<span class="star" style="top:40px;left:350px">★</span>
-<span class="star" style="top:105px;left:430px">★</span>
-<span class="star" style="top:145px;left:160px">★</span>
+<!-- جواب لكي -->
+<section id="letter">
+<div class="card" style="text-align:center">
+<h3>جواب لكي</h3>
+<p style="text-align:center">يا تسنيم، حبيت أجمع أحلى ذكرياتنا هنا،<br>عشان تبقي تفتكريها كل ما تشوفيها.</p>
 </div>
 </section>
 
+<!-- أحلى أيامنا -->
 <section>
-<h2>أحلى أيامنا</h2>
-<p>الأيام اللي عمرنا ما هننساها</p>
-<div class="card"><b>تالتة إعدادي</b><p>أحلى أيام كانت أيام الدروس في تالتة إعدادي، ومن هنا بدأت حكايتنا.</p></div>
-<div class="card"><b>أيام الدروس</b><p>يوم ما كنا بنشوف بعض كل يوم، وكل يوم كان أحلى من اللي قبله.</p></div>
-<div class="card"><b>أحلى مفاجأة</b><p>يوم 2008 / 4 / 8 - عشان نورتي الدنيا.</p></div>
-<div class="card"><b>يوم ما قلتي بحبك</b><p>يوم ما الدنيا كلها نورت، وأحلى يوم في حياتي.</p></div>
-</section>
-
-<section>
-<h2>جواب لكي</h2>
-<div class="letter">
-يا أحلى حاجة حصلت في حياتي،<br>
-عمري ما هنسى أول يوم اتكلمنا فيه حتى لو كان من زمان.<br>
-أنا عارف اني مقصر معاكي كتير، بس والله انتي في قلبي على طول.<br>
-انتي اللي بتخليني أضحك من قلبي، وانتي اللي بتهوني عليا أي حاجة.<br>
-أنا بحبك بجد، وبحب كل حاجة فيكي، وعايز أفضل جنبك على طول.<br><br>
-بحبك يا نيمو ❤️
+<h2 style="color:#b98a5a;font-size:32px">أحلى أيامنا</h2>
+<p class="sub">كل تاريخ فيهم ليه حكاية</p>
+<div class="timeline">
+<div class="t-item"><small>تالتة إعدادي</small><b>أيام الدروس</b><p>أول مرة شفتك فيها.</p></div>
+<div class="t-item"><small>أحلى مفاجأة</small><b>يوم لقيتك بتعاتي</b><p>يوم عمري ما هنساه.</p></div>
+<div class="t-item"><small>أحلى رد</small><b>يوم رديتي عليا</b><p>أسعد لحظة في حياتي.</p></div>
+<div class="t-item"><small>2008 / 4 / 8</small><b>اليوم اللي نورتي فيه الدنيا</b><p>عيد ميلاد أغلى حد في حياتي.</p></div>
 </div>
 </section>
 
+<!-- النجوم -->
 <section>
-<h2>ليه بحبك</h2>
-<p>اضغطي على أي مربع</p>
+<h2 style="color:#b98a5a;font-size:32px">كل نجمة بجوابها</h2>
+<p class="sub">دوسي على أي نجمة عشان تشوفي حكايتها</p>
+<div class="stars-box" id="starsBox">
+<span class="star" style="top:20px;right:10%" data-i="0">★</span>
+<span class="star" style="top:120px;right:30%" data-i="1">★</span>
+<span class="star" style="top:40px;right:55%" data-i="2">★</span>
+<span class="star" style="top:180px;right:65%" data-i="3">★</span>
+<span class="star" style="top:60px;right:85%" data-i="4">★</span>
+<span class="star" style="top:230px;right:45%;color:#d77a8a" data-i="5">★</span>
+</div>
+<div id="starText"><h3>اختاري نجمة من فوق 👆</h3><p>كل نجمة فيها ذكرى من ذكرياتنا.</p></div>
+</section>
+
+<!-- ليه بحبك -->
+<section>
+<h2 style="color:#b98a5a;font-size:32px">ليه بحبك؟</h2>
+<p class="sub">اكتب 6 أسباب حلوين - عشان انتي تستاهلي أكتر من كده بكتير</p>
 <div class="reasons">
-<div class="reason"><b>سبب 1</b><p>جميلة وعاقلة</p></div>
-<div class="reason"><b>سبب 2</b><p>عيونك حلوة</p></div>
-<div class="reason"><b>سبب 3</b><p>حب إعدادي</p></div>
-<div class="reason"><b>سبب 4</b><p>طيبة وحنينة</p></div>
-<div class="reason"><b>سبب 5</b><p>قمر أوي</p></div>
-<div class="reason"><b>سبب 6</b><p>أجمل وأرق وأحلى واحدة شوفتها في حياتي</p></div>
+<div class="reason"><b>1. ضحكتك</b><p>ضحكتك اللي من أول مرة شفتها عند الآبلة نجاح وأنا مش عارف أنساها.</p></div>
+<div class="reason"><b>2. طيبتك</b><p>قلبك الطيب اللي بيخلي أي مكان تنوري فيه أحلى.</p></div>
+<div class="reason"><b>3. تشجيعك ليا</b><p>إنك شجعتيني أيام الامتحانات، وكنت على بالك، دي لوحدها كفاية.</p></div>
+<div class="reason"><b>4. وجودك</b><p>وجودك بيخلي اليوم العادي ذكرى، والذكرى حكاية.</p></div>
+<div class="reason"><b>5. إنك انتي</b><p>مش شايف غيرك أصلاً، ولا كنت عايز غيرك، ولسه زي ما أنا.</p></div>
+<div class="reason"><b>6. إنك نيمو بتاعتي</b><p>إنتي مش بس حبيبتي، إنتي صاحبتي وحكايتي كلها.</p></div>
 </div>
 </section>
 
+<!-- النهاية -->
 <section>
-<h2>وآخر حاجة</h2>
-<p>فيه كلمة لسه ما قلتهاش كفاية</p><br>
-<button class="btn" onclick="alert('بحبك يا نيمو ❤️')">❤️ بحبك يا نيمو</button>
+<div class="card" style="text-align:center">
+<h2>ولسه زي ما أنا</h2>
+<p style="text-align:center;line-height:2">من أول يوم لحد دلوقتي،<br>كنت مش شايف غيرك أصلاً، ولا كنت عايز غيرك،<br>ولسه برضو مش شايف غيرك، ولا عايز غيرك.</p>
+<div class="final">بحبك يا نيمو ♥</div>
+<p>محمد</p>
+</div>
 </section>
-
-<div class="footer">اتعمل بحب ❤️ لإنس وبس</div>
 
 <script>
-const start = new Date('2023-10-01T00:00:00');
-function tick(){
-let diff = new Date() - start;
-let d = Math.floor(diff/86400000);
-let h = Math.floor(diff/3600000)%24;
-let m = Math.floor(diff/60000)%60;
-let s = Math.floor(diff/1000)%60;
-document.getElementById('d').innerText=d;
-document.getElementById('h').innerText=h;
-document.getElementById('m').innerText=m;
-document.getElementById('s').innerText=s;
+const stories=[
+{t:"أول مرة اتقابلنا - عند الآبلة نجاح",d:"أول مرة شفتك كانت عند الآبلة نجاح، وإنتي قاعدة ورايا، بصيتلك وضحكت، وإنتي استغربتي من ضحكتي، ما كنتش عارف إن النظرة والضحكة دي هيبقوا بداية حكايتنا."},
+{t:"يوم كنا عند أحمد رياض",d:"لما كنا عند أحمد رياض كان واضح أوي إني مهتم بيك، بس ما كانش فارق معايا، وصاحبتك أميمة كانت بتبص وبتبترّق، وبرضو ما اهتمتش، كنت شايف إنتي بس."},
+{t:"الفولو وليلة الفلانتين",d:"لما دورت ولقيت الأكونت بتاعك عملت فولو من غير ما أتردد، وشفت الستوري، ولما لقيتك شايفة الستوري بتاعي فرحت جدًا جدًا، ومش هنسى ليلة الفلانتين، لما كنت بنزل ستوري، وإنتي نزلتي إنه حرام، قلت الدنيا قفلت في وشي وقلت لنفسي: لو الأهلي كسب الريال هدخل أبعتلك، وللأسف الأهلي اتغلب، فيا رتني كنت بعت."},
+{t:"أيام الامتحانات",d:"مش هنسى إنك شجعتيني أيام الامتحانات إني أذاكر ومبسوط إني جيت على بالك، وبحبك أوي."},
+{t:"اليوم الأسود ورجوعنا",d:"يوم نزلت ستوري ليكي أنتي بس، حركة غبية مني واعذريني، كنت خايف أبعتلك، ولقيتك عملتي بلوك، وكنت هتجنن يومها، بس عملت أكونت جديد وبعتلك، ورديتي واتكلمنا، وكانت من أسعد لحظات حياتي، ومع الوقت حصل خير، واتصالحنا ورجعنا نحكي الذكريات دي مع بعض."},
+{t:"ولسه زي ما أنا",d:"من أول يوم لحد دلوقتي، كنت مش شايف غيرك أصلاً، ولا كنت عايز غيرك، ولسه برضو مش شايف غيرك، ولا عايز غيرك."}
+];
+document.querySelectorAll('.star').forEach(s=>{
+s.onclick=()=>{
+document.querySelectorAll('.star').forEach(x=>x.classList.remove('active'));
+s.classList.add('active');
+let st=stories[s.dataset.i];
+document.getElementById('starText').innerHTML=`<h3>${st.t}</h3><p>${st.d}</p>`;
 }
-setInterval(tick,1000); tick();
+});
+// عداد من يوم ما اتقابلتوا - غير التاريخ ده لو حابب
+let start=new Date('2024-01-01T00:00:00');
+function tick(){
+let now=new Date();let diff=now-start;
+document.getElementById('d').innerText=Math.floor(diff/86400000);
+document.getElementById('h').innerText=Math.floor(diff/3600000)%24;
+document.getElementById('m').innerText=Math.floor(diff/60000)%60;
+document.getElementById('s').innerText=Math.floor(diff/1000)%60;
+}
+setInterval(tick,1000);tick();
 </script>
 </body>
 </html>
