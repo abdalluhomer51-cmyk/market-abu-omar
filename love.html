@@ -20,21 +20,18 @@ h1 span{color:#c9a86a}
 .card{background:#fff;border-radius:24px;padding:30px;box-shadow:0 10px 30px rgba(0,0,0,.06);margin:20px 0;text-align:right}
 .card h3{color:#b98a5a;margin-bottom:10px}
 .card p{line-height:1.9;font-size:17px}
-/* Timeline */
 .timeline{position:relative;padding-right:20px}
 .timeline::before{content:'';position:absolute;right:28px;top:0;bottom:0;width:3px;background:#f2d6d6}
 .t-item{position:relative;margin:25px 50px 25px 0;text-align:right;background:#fff;padding:18px;border-radius:18px;box-shadow:0 5px 15px rgba(0,0,0,.04)}
 .t-item::before{content:'♥';position:absolute;right:-38px;top:18px;background:#fbe9e9;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#d77a8a}
 .t-item small{color:#c9a86a;font-weight:700}
 .t-item b{display:block;font-size:18px;margin:4px 0}
-/* Stars */
 .stars-box{background:#f9ecec;border-radius:24px;padding:30px;position:relative;height:320px;overflow:hidden}
 .star{position:absolute;font-size:32px;cursor:pointer;transition:.2s}
 .star:hover{transform:scale(1.3)}
 .star.active{color:#d77a8a}
 #starText{background:#fff;border-radius:20px;padding:25px;margin-top:20px;min-height:130px;text-align:right;line-height:1.9}
 #starText h3{color:#d77a8a;margin-bottom:8px}
-/* Reasons */
 .reasons{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:20px}
 .reason{background:#fff;border-radius:20px;padding:22px;text-align:right;box-shadow:0 5px 15px rgba(0,0,0,.04);border-right:4px solid #e8b4b8}
 .reason b{color:#d77a8a;display:block;margin-bottom:6px}
@@ -45,7 +42,6 @@ h1 span{color:#c9a86a}
 </head>
 <body>
 
-<!-- الغلاف -->
 <section>
 <p>حكاية بدأت من غير ما نخطط لها</p>
 <h1>محمد <span>&</span> تسنيم</h1>
@@ -60,7 +56,6 @@ h1 span{color:#c9a86a}
 <a href="#letter"><button class="btn">ابدأي الحكاية ♥</button></a>
 </section>
 
-<!-- جواب لكي -->
 <section id="letter">
 <div class="card" style="text-align:center">
 <h3>جواب لكي</h3>
@@ -68,7 +63,6 @@ h1 span{color:#c9a86a}
 </div>
 </section>
 
-<!-- أحلى أيامنا -->
 <section>
 <h2 style="color:#b98a5a;font-size:32px">أحلى أيامنا</h2>
 <p class="sub">كل تاريخ فيهم ليه حكاية</p>
@@ -80,7 +74,6 @@ h1 span{color:#c9a86a}
 </div>
 </section>
 
-<!-- النجوم -->
 <section>
 <h2 style="color:#b98a5a;font-size:32px">كل نجمة بجوابها</h2>
 <p class="sub">دوسي على أي نجمة عشان تشوفي حكايتها</p>
@@ -95,7 +88,6 @@ h1 span{color:#c9a86a}
 <div id="starText"><h3>اختاري نجمة من فوق 👆</h3><p>كل نجمة فيها ذكرى من ذكرياتنا.</p></div>
 </section>
 
-<!-- ليه بحبك -->
 <section>
 <h2 style="color:#b98a5a;font-size:32px">ليه بحبك؟</h2>
 <p class="sub">اكتب 6 أسباب حلوين - عشان انتي تستاهلي أكتر من كده بكتير</p>
@@ -109,7 +101,6 @@ h1 span{color:#c9a86a}
 </div>
 </section>
 
-<!-- النهاية -->
 <section>
 <div class="card" style="text-align:center">
 <h2>ولسه زي ما أنا</h2>
@@ -136,8 +127,8 @@ let st=stories[s.dataset.i];
 document.getElementById('starText').innerHTML=`<h3>${st.t}</h3><p>${st.d}</p>`;
 }
 });
-// عداد من يوم ما اتقابلتوا - غير التاريخ ده لو حابب
-let start=new Date('2024-01-01T00:00:00');
+// العداد بيبدأ من صفر زي ما انت عايز
+let start=new Date();
 function tick(){
 let now=new Date();let diff=now-start;
 document.getElementById('d').innerText=Math.floor(diff/86400000);
