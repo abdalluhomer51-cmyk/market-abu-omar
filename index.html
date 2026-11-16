@@ -3,34 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ماركت أبو عمر</title>
+<title>ماركت أبو عمر 🛒</title>
 <style>
-body{font-family:Arial;background:#f6f6f6;margin:0;text-align:center}
-header{background:#0a7a42;color:white;padding:25px}
-header h1{margin:0;font-size:32px}
-header p{margin:5px}
-.products{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;padding:20px}
-.card{background:white;width:200px;border-radius:15px;padding:15px;box-shadow:0 2px 8px #ccc}
-.card h3{margin:10px 0 5px}
-.card p{color:#0a7a42;font-weight:bold}
-button{background:#0a7a42;color:white;border:0;padding:10px 15px;border-radius:10px;cursor:pointer}
-footer{background:#222;color:white;padding:15px;margin-top:20px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif}
+body{background:#f7f7f7}
+.wrap{max-width:480px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 20px rgba(0,0,0,.08)}
+@media(min-width:600px){body{background:#eee}.wrap{max-width:520px}}
+/* الهيدر */
+header{background:#FFD500;padding:25px 18px 18px;text-align:center}
+header h1{font-size:42px;font-weight:900;color:#1a1a1a;line-height:1.2}
+header p{margin-top:8px;font-size:15px;font-weight:600}
+.badges{margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.badges span{background:#D32F2F;color:#fff;padding:8px 12px;border-radius:20px;font-size:13px;font-weight:700}
+.badges span:last-child{background:#fff;color:#333}
+/* البحث */
+.search-box{padding:14px}
+.search-box input{width:100%;padding:13px 16px;border:1px solid #ddd;border-radius:30px;font-size:15px;outline:none;text-align:right;background:#f9f9f9}
+/* الاقسام */
+.cats{display:flex;gap:10px;overflow-x:auto;padding:4px 14px 12px;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.cats button{white-space:nowrap;border:1px solid #eee;background:#fff;padding:9px 14px;border-radius:20px;font-size:14px;cursor:pointer}
+.cats button.active{background:#111;color:#fff;border-color:#111}
+/* عروض */
+.section{padding:0 14px 16px}
+.section h2{font-size:20px;margin-bottom:12px}
+.offer{background:#FFD500;border-radius:14px;padding:16px;display:flex;justify-content:space-between;align-items:center}
+.offer b{font-size:18px}
+.offer span{display:block;font-size:13px;margin-top:4px;color:#555}
+.offer .price{font-size:26px;font-weight:900;color:#D32F2F}
+.offer button{background:#1B5E20;color:#fff;border:none;padding:10px 16px;border-radius:8px;font-weight:700;margin-top:8px;cursor:pointer}
+/* المنتجات */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:#FFF8D6;border-radius:14px;overflow:hidden;text-align:center;padding-bottom:12px;border:1px solid #f0e6a0}
+.card .img{height:110px;display:flex;align-items:center;justify-content:center;font-size:55px;background:#FFD500}
+.card h3{font-size:16px;margin:10px 6px 4px;line-height:1.3}
+.card p{font-size:12px;color:#777}
+.card .pr{margin:8px 0;font-size:18px;font-weight:900}
+.card .pr s{font-size:13px;color:#999;font-weight:400}
+.card button{background:#1B5E20;color:#fff;border:none;padding:9px 18px;border-radius:8px;font-weight:700;cursor:pointer}
+/* عنا */
+.about{padding:10px 14px 20px}
+.about h2{font-size:19px;margin-bottom:8px}
+.about p{font-size:14px;line-height:1.8;color:#555}
+.btns{display:flex;gap:8px;margin-top:12px}
+.btns a{flex:1;text-align:center;text-decoration:none;padding:11px;border-radius:10px;font-weight:700;font-size:14px}
+.btns .wa{background:#1B5E20;color:#fff}
+.btns .call{background:#eee;color:#111}
+footer{background:#111;color:#fff;text-align:center;padding:14px;font-size:13px}
 </style>
 </head>
 <body>
+<div class="wrap">
+
 <header>
-<h1>🛒 ماركت أبو عمر</h1>
-<p>أحسن أسعار - توصيل سريع - جودة تستاهلها</p>
-<p>📞 للطلبات: واتساب</p>
-</header>
-<div class="products">
-<div class="card"><h3>🍅 طماطم - كيلو</h3><p>25 جنيه</p><button>اطلب الآن</button></div>
-<div class="card"><h3>🥒 خيار - كيلو</h3><p>20 جنيه</p><button>اطلب الآن</button></div>
-<div class="card"><h3>🥛 لبن - لتر</h3><p>35 جنيه</p><button>اطلب الآن</button></div>
-<div class="card"><h3>🍞 عيش بلدي</h3><p>5 جنيه</p><button>اطلب الآن</button></div>
-<div class="card"><h3>🥚 بيض - طبق</h3><p>150 جنيه</p><button>اطلب الآن</button></div>
-<div class="card"><h3>🧀 جبنة - كيلو</h3><p>120 جنيه</p><button>اطلب الآن</button></div>
+<h1>ماركت أبو عمر 🛒</h1>
+<p>كل طلبات بيتك في مكان واحد</p>
+<div class="badges">
+<span>متوفر شوف عروض الأسبوع</span>
+<span>توصيل مجاني فوق 300 ج</span>
 </div>
-<footer>ماركت أبو عمر - البرامون - الدقهلية</footer>
+<div class="badges">
+<span>من 6 الصبح لـ 2 بعد نص الليل</span>
+</div>
+</header>
+
+<div class="search-box">
+<input type="text" id="search" placeholder="🔍 دور على أي منتج ...">
+</div>
+
+<div class="cats">
+<button class="active" onclick="filterCat('all',this)">الكل</button>
+<button onclick="filterCat('خضار',this)">🥬 خضار وفاكهة</button>
+<button onclick="filterCat('البان',this)">🥛 ألبان وبيض</button>
+<button onclick="filterCat('بقالة',this)">🛍️ بقالة</button>
+<button onclick="filterCat('عناية',this)">🧴 مواد عناية</button>
+<button onclick="filterCat('منظفات',this)">🧹 منظفات</button>
+</div>
+
+<div class="section">
+<h2>🔥 عروض الأسبوع</h2>
+<div class="offer">
+<div>
+<b>جبنة رومي وجبن</b>
+<span>عرض خاص لفترة محدودة</span>
+<button onclick="order('عرض جبنة رومي')">اطلب الآن</button>
+</div>
+<div class="price">21 ج</div>
+</div>
+</div>
+
+<div class="section">
+<h2>🛒 المنتجات</h2>
+<div class="grid" id="products"></div>
+</div>
+
+<div class="about">
+<h2>| عن ماركت أبو عمر</h2>
+<p>ماركت أبو عمر في البرامون، أقدم وأكبر ماركت في المنطقة. عندنا كل حاجة بيتك محتاجها، من خضار طازة ولحوم وألبان لحد المنظفات، وبنوصل لحد باب البيت.</p>
+<div class="btns">
+<a class="wa" href="https://wa.me/201000000000?text=عايز اطلب من ماركت أبو عمر" target="_blank">اطلب واتساب</a>
+<a class="call" href="tel:01000000000">اتصل بينا</a>
+</div>
+</div>
+
+<footer>ماركت أبو عمر - البرامون - توصيل سريع لحد البيت ❤️</footer>
+
+</div>
+
+<script>
+const data=[
+{name:"طماطم - كيلو",cat:"خضار",price:25,old:30,emoji:"🍅"},
+{name:"خيار - كيلو",cat:"خضار",price:20,old:25,emoji:"🥒"},
+{name:"بطاطس - كيلو",cat:"خضار",price:18,old:22,emoji:"🥔"},
+{name:"بصل - كيلو",cat:"خضار",price:15,old:18,emoji:"🧅"},
+{name:"موز - كيلو",cat:"خضار",price:35,old:40,emoji:"🍌"},
+{name:"لبن - لتر",cat:"البان",price:35,old:40,emoji:"🥛"},
+{name:"بيض - طبق 30",cat:"البان",price:145,old:160,emoji:"🥚"},
+{name:"جبنة رومي - ربع",cat:"البان",price:70,old:80,emoji:"🧀"},
+{name:"رز - كيلو",cat:"بقالة",price:32,old:35,emoji:"🍚"},
+{name:"زيت - لتر",cat:"بقالة",price:75,old:85,emoji:"🫒"},
+{name:"سكر - كيلو",cat:"بقالة",price:30,old:33,emoji:"🧂"},
+{name:"شاي - ربع",cat:"بقالة",price:55,old:60,emoji:"🍵"},
+{name:"صابون - قطعة",cat:"عناية",price:25,old:30,emoji:"� soap".replace(" soap","")},
+{name:"شامبو",cat:"عناية",price:85,old:95,emoji:"🧴"},
+{name:"مسحوق غسيل - كيلو",cat:"منظفات",price:65,old:75,emoji:"🧹"},
+{name:"صابون مواعين",cat:"منظفات",price:35,old:40,emoji:"🧽"},
+];
+
+let currentCat='all';
+function render(){
+let q=document.getElementById('search').value.toLowerCase();
+let box=document.getElementById('products');
+box.innerHTML='';
+data.filter(p=>{
+let okCat = currentCat=='all' || p.cat==currentCat;
+let okQ = p.name.includes(q) || q=='';
+return okCat && okQ;
+}).forEach(p=>{
+box.innerHTML+=`
+<div class="card">
+<div class="img">${p.emoji}</div>
+<h3>${p.name}</h3>
+<p>${p.cat}</p>
+<div class="pr">${p.price} ج <s>${p.old} ج</s></div>
+<button onclick="order('${p.name} - ${p.price} ج')">أضف +</button>
+</div>`;
+});
+}
+function filterCat(c,btn){
+currentCat=c;
+document.querySelectorAll('.cats button').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+render();
+}
+document.getElementById('search').addEventListener('input',render);
+function order(txt){
+window.open('https://wa.me/201042846387?text='+encodeURIComponent('عايز اطلب: '+txt),'_blank');
+}
+render();
+</script>
 </body>
 </html>
